@@ -30,7 +30,7 @@ public class LinkedList {
 					}
 					break;
 			case 3: if(node!=null){
-						
+						node = deleteNode(node);
 					}
 					break;
 			case 4: if(node!=null){
@@ -38,7 +38,7 @@ public class LinkedList {
 					}
 					break;
 			case 5: if(node!=null){
-						
+						getNode(node);
 					}
 					break;
 			case 6: if(node!=null){
@@ -53,7 +53,50 @@ public class LinkedList {
 		}while(choice!=0);
 	}
 	
+	public static Node deleteNode(Node node){
+		System.out.println("Enter the position of the node to be deleted:");
+		Scanner input = new Scanner(System.in);
+		int pos = input.nextInt();
+		if(pos<1 || pos>getSize(node)){
+			System.out.println("Wrong position entered");
+		}
+		else{
+			int i=1;
+			Node startNode = node;
+			while(node!=null){
+				if(pos==1){
+					node = node.next;
+					return node;
+				}
+				else if(pos==i+1){
+					node.next = node.next.next;
+					return startNode;
+				}
+				else{
+					node= node.next;
+					i++;
+				}
+			}
+		}
+		return node;
+	}
 	
+	public static void getNode(Node node){
+		System.out.println("Enter the position of the node:");
+		Scanner input = new Scanner(System.in);
+		int pos = input.nextInt();
+		int i=1;
+		
+		while(node!=null){
+			if(pos==i){
+				System.out.println("Value at position "+ pos +" is "+ node.getValue());
+				return;
+			}
+			i++;
+			node= node.next;
+		}
+		System.out.println("Node at this position does not exist");
+	}
 	
 	public static void printList(Node node){
 		while(node!=null){
@@ -113,7 +156,7 @@ public class LinkedList {
 		System.out.println("Enter the position you want to enter the new node:");
 		Scanner input = new Scanner(System.in);
 		int pos = input.nextInt();
-		if(pos<=1 || pos>node.getSize(node)+1){
+		if(pos<=1 || pos>getSize(node)+1){
 			System.out.println("Enter position greater than 1");
 			return node;
 		}
@@ -129,5 +172,14 @@ public class LinkedList {
 			node.next=newNode;
 			return startNode;
 		}
+	}
+	
+	public static int getSize(Node node){
+		int count=0;
+		while(node!=null){
+			count++;
+			node = node.next;
+		}
+		return count;
 	}
 }
