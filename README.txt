@@ -7,3 +7,4 @@ List of the problems with links:
 4. Bubble sort: /src/Sorts/BubbleSort.java
 5. Reverse words in a string: /src/ReverseWords
 6. Non Repeating character in the string: /src/FirstNonRepeatingCharacter/
+7. LinkedList in Java: /src/Lists
