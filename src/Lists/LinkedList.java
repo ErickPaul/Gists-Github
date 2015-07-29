@@ -15,8 +15,8 @@ public class LinkedList {
 					+ "1. Create a list\n"
 					+ "2. Add a node\n"
 					+ "3. Delete a node\n"
-					+ "4. Change a node\n"
-					+ "5. Get a node\n"
+					+ "4. Get a node\n"
+					+ "5. Reverse the List\n"
 					+ "6. Print the List\n"
 					+ "0. Exit");
 			choice = input.nextInt();
@@ -34,11 +34,11 @@ public class LinkedList {
 					}
 					break;
 			case 4: if(node!=null){
-						
+						getNode(node);
 					}
 					break;
 			case 5: if(node!=null){
-						getNode(node);
+						node = reverseList(node);
 					}
 					break;
 			case 6: if(node!=null){
@@ -51,6 +51,21 @@ public class LinkedList {
 					break;
 			}
 		}while(choice!=0);
+	}
+	
+	public static Node reverseList(Node node){
+		Node i = null;
+		Node j = node;
+		Node k = null;
+		
+		while(j.next!=null){
+			k = j.next;
+			j.next=i;
+			i = j;
+			j = k;
+		}
+		j.next=i;
+		return j;
 	}
 	
 	public static Node deleteNode(Node node){
