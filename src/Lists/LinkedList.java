@@ -18,6 +18,7 @@ public class LinkedList {
 					+ "4. Get a node\n"
 					+ "5. Reverse the List\n"
 					+ "6. Print the List\n"
+					+ "7. Get Kth Node\n"
 					+ "0. Exit");
 			choice = input.nextInt();
 			switch (choice) {
@@ -45,12 +46,43 @@ public class LinkedList {
 						printList(node);
 					} 
 					break;
+			case 7: if(node!=null){
+						getKthNode(node);
+					}
+					break;
 			case 0: System.exit(0);
 					break;
 			default:System.out.println("Wrong option selected!");
 					break;
 			}
 		}while(choice!=0);
+	}
+	
+	public static void getKthNode(Node node){
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the Kth value:");
+		int num = input.nextInt();
+		
+		Node i=node;
+		Node j=node;
+		
+		if(num>getSize(node) || num<1){
+			System.out.println("Wrong Kth value. It should be less than size of the list and greater than 0");
+			return;
+		}
+		
+		int x=1;
+		while(x<num){
+			j=j.next;
+			x++;
+		}
+		
+		while(j.next!=null){
+			i=i.next;
+			j=j.next;
+		}
+		
+		System.out.println(num + "th node value is: " + i.getValue());
 	}
 	
 	public static Node reverseList(Node node){
@@ -123,7 +155,7 @@ public class LinkedList {
 	
 	public static Node createList(){
 		Scanner input = new Scanner(System.in);
-		System.out.println("Enter the firsat node in the list:");
+		System.out.println("Enter the first node in the list:");
 		int value = input.nextInt();
 		return new Node(value);
 	}
