@@ -58,7 +58,7 @@ public class NumberAdditionUsingLinkedList {
 		
 		Node resultNode = getAddition(node1, node2);
 		
-		LinkedList.printList(resultNode);
+		LinkedList.printList(LinkedList.reverseList(resultNode));
 		
 	}
 
@@ -103,7 +103,7 @@ public class NumberAdditionUsingLinkedList {
 					k.next = new Node(unitVal);
 					k = k.next;
 				}
-				tensVal = val%100;
+				tensVal = val/10;
 			}
 			i=i.next;
 			j=j.next;
@@ -127,7 +127,7 @@ public class NumberAdditionUsingLinkedList {
 				int unitVal = val%10;
 				k.next = new Node(unitVal);
 				k = k.next;
-				tensVal = val%100-unitVal;
+				tensVal = val/10;
 			}
 			i=i.next;
 		}
@@ -149,7 +149,7 @@ public class NumberAdditionUsingLinkedList {
 				int unitVal = val%10;
 				k.next = new Node(unitVal);
 				k = k.next;
-				tensVal = val%100-unitVal;
+				tensVal = val/10;
 			}
 			j=j.next;
 		}
