@@ -9,3 +9,4 @@ List of the problems with links:
 6. Non Repeating character in the string: /src/FirstNonRepeatingCharacter/
 7. LinkedList in Java: /src/Lists/LinkedList
 8. LinkedList number addition: /src/Lists/NumberAdditionUsingLinkedList
+9. Intersection of 2 sorted arrays: /src/Arrays/SortedArrayIntersection
