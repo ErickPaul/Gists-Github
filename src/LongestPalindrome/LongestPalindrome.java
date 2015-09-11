@@ -1,37 +1,40 @@
 import java.util.Scanner;
 
 public class LongestPalindrome{
-
 	public static void main(String args[]){
-
 		Scanner input = new Scanner(System.in);
-		System.out.println("Enter new input string:");
+		System.out.println("Enter the String: ");
 		String str = input.nextLine();
-	
-		String result="";
-		for(int i=0; i<str.length(); i++){
-			
-			String temp1 = getLongestPalindrome(str, i, i);
-			String temp2 = getLongestPalindrome(str, i, i+1);
-			if(result.length()<temp1.length())
-				result = temp1;
-			
-			if(result.length()<temp2.length())
-				result = temp2;
-		}
-		System.out.println("Longest Palindrome is :" + result);
+
+		str = longestPalindrome(str);
+		System.out.println("Result longest palindrome is: " + str);
 	}
 
-	public static String getLongestPalindrome(String str, int start, int end){
-		while(start>=0 && end < str.length()){
-			if(str.charAt(start) == str.charAt(end)){
-				start--;
-				end++;
-			}
-			else{
-				return str.substring(++start, end);
-			}
+	public static String longestPalindrome(String str) {
+		if (str.isEmpty())
+			return null;
+		 
+	 	if (str.length() == 1)
+			return str;
+										 
+	 	String longest = "";
+		for (int i = 0; i < str.length(); i++) {
+			String tmp = findLongest(str, i, i);
+			if (tmp.length() > longest.length()) 
+				longest = tmp;																	 
+	
+			tmp = findLongest(str, i, i + 1);
+			if (tmp.length() > longest.length())
+				longest = tmp;	
 		}
-		return str.substring(++start, end);
+		return longest;
+	}
+	
+	public static String findLongest(String str, int begin, int end) {
+		while (begin >= 0 && end <= str.length() - 1 && str.charAt(begin) == str.charAt(end)) {
+			begin--;
+			end++;
+		}
+		return str.substring(begin + 1, end);
 	}
 }
