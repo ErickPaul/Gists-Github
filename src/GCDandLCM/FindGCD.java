@@ -1,3 +1,5 @@
+package GCDandLCM;
+
 import java.util.*;
 
 public class FindGCD{
