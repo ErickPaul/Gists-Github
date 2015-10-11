@@ -1,7 +1,7 @@
 package CyclicLinkedList;
  
 import java.util.Scanner;
-
+ 
 public class CyclicLinkedList{
 	public static void main(String args[]){
 		Node head = createLinkedList();
