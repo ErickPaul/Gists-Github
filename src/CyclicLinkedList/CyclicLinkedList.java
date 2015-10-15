@@ -1,5 +1,5 @@
 package CyclicLinkedList;
-
+ 
 import java.util.Scanner;
 
 public class CyclicLinkedList{
