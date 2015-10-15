@@ -42,11 +42,17 @@ public class FindGCD{
 	}
 
 	public static List<Integer> getPrimeFactors(int num){
+		int temp=1;
 		List<Integer> result = new ArrayList<Integer>();
-		for(int i=1; i<=num; i++){
+		result.add(1);
+		for(int i=2; i<=num; i++){
 			if(num%i==0){
 				result.add(i);
 				num /= i;
+				i=temp;
+			}
+			else{
+				temp=i;
 			}
 		}
 		return result;
