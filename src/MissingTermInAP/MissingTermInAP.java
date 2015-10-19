@@ -1,3 +1,5 @@
+package MissingTermInAP;
+
 import java.util.Scanner;
 
 class MissingTermInAP{
