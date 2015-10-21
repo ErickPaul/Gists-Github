@@ -1,3 +1,5 @@
+package RepeatedNumber;
+
 import java.util.Scanner;
 
 public class RepeatedNumber{
