@@ -1,9 +1,10 @@
 package Difference;
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 class SameDifference{
-	public static void main(String args[]){
+	public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter the number of numbers:");
 		int num = input.nextInt();
@@ -20,7 +21,7 @@ class SameDifference{
 	}
 
 	public static void printSameDiff(int[] arr, int diff){
-		sortArray(arr);
+		Arrays.sort(arr);
 		
 		for(int i=0; i<arr.length; i++){
 			System.out.println("Number " + (i+1) + " " + arr[i]);
@@ -41,20 +42,5 @@ class SameDifference{
 				j++;
 			}
 		}
-	}
-
-	public static int[] sortArray(int[] arr){
-		
-		for(int i=0; i<arr.length; i++){
-			for(int j=i; j<arr.length; j++){
-				if(arr[i] > arr[j]){
-					int x = arr[j];
-					arr[j] = arr[i];
-					arr[i] = x;
-				}
-			}
-		}
-
-		return arr;
 	}
 }
