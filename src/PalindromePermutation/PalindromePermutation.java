@@ -1,3 +1,5 @@
+package PalindromePermutation;
+
 import java.util.*;
 
 public class PalindromePermutation{
