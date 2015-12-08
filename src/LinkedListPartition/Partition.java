@@ -1,3 +1,5 @@
+package LinkedListPartition;
+
 import java.util.*;
 
 public class Partition{
