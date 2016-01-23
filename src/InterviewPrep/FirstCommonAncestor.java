@@ -31,7 +31,7 @@ public class FirstCommonAncestor{
 	public static void main(String[] args){
 
 		AncestorTree tree = new AncestorTree(20, new AncestorTree(10, new AncestorTree(5, new AncestorTree(3), new AncestorTree(7)), new AncestorTree(15, new AncestorTree(14), new AncestorTree(17))), new AncestorTree(30));
-		leftInOrder(tree, 7);
+		leftInOrder(tree, 7 );
 		rightInOrder(tree, 17);
 
 		System.out.println(stack1);
