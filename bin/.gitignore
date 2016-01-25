@@ -1,3 +1,10 @@
+/.DS_Store
+/Arrays/
+/CardShuffle/
+/CyclicLinkedList/
+/Demo.class
+/Difference/
+/DigitSum/
 /DistinctPalindromes/
 /DumpMethods.class
 /DuplicateNode/
@@ -6,6 +13,7 @@
 /FirstNonRepeatingCharacter/
 /GCDandLCM/
 /Informatica/
+/InterviewPrep/
 /Job.class
 /LinkedListPartition/
 /Lists/
@@ -26,10 +34,10 @@
 /SherloackBeast/
 /Solution.class
 /Sorts/
+/TextNowTest/
 /TopView/
 /TranslateNumbertoString/
 /TreeDiameter/
 /ValidParenthesis/
 /isBinary/
 /reverseString/
-/TextNowTest/
