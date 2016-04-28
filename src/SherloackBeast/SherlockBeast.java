@@ -49,6 +49,9 @@ For N=11, 55555533333 and all permutations of these digits are valid numbers; am
 public class SherlockBeast {
 
     public static void main(String[] args) {
+    	int[] arr = new int[5];
+    	String str = "vishal";
+    	System.out.println(str.length());
         Scanner input = new Scanner(System.in);
         int count = input.nextInt();
         for(int i=0; i<count; i++){

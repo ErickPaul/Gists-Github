@@ -12,14 +12,30 @@ import java.util.Scanner;
 
 public class ValidBrackets {
 	public static void main(String[] args) {
-		String s;
+		/*String s;
 		System.out.println("Enter a string of parenthesis:");
 		Scanner input = new Scanner(System.in);
-		s=input.nextLine();
+		s=input.nextLine();*/
 		
-		Boolean b = isValid(s);
+		String[] arr = {"{[]}", "[]", "[}"};
 		
-		System.out.println("Answer is : " + b);
+		String answer[] = new String[arr.length];
+		int i=0;
+		for(String str : arr){ 
+					
+				if(isValid(str)){
+					answer[i] = "YES";
+				}
+				else{
+					answer[i] = "NO";
+				}
+			i++;
+		}
+		
+		
+		for(String str: answer){
+			System.out.println(str);
+		}
 		
 	}
 	

@@ -1,3 +1,5 @@
+package DistinctPalindromes;
+
 import java.util.Scanner;
 import java.util.HashSet;
 

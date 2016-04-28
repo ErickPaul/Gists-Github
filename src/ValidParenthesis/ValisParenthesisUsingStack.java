@@ -6,7 +6,7 @@ public class ValisParenthesisUsingStack {
 	public static void main(String[] args) {
 		String[] str = new String[2];
 		str[0] = "(){";
-		str[1] = "(){]";
+		str[1] = "(){}";
 		String[] result = Braces(str);
 		
 		for(String strr: result){
